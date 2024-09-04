@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details and Summary with Icons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        summary {
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        summary::before {
+            content: "▶ ";
+            font-size: 1em;
+        }
+
+        summary:focus {
+            outline: none;
+        }
+
+        details[open] summary::before {
+            content: "▼ ";
+        }
+
+        .icon {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .details-content {
+            margin-top: 10px;
+        }
+
+        .table-container {
+            margin-top: 15px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>
+            <img src="../images/roses.jpeg" alt="Image icon" class="icon">
+            <img src="../images/IndiaImg.jpeg" alt="Table icon" class="icon">
+            Click here for more details
+        </summary>
+        <div class="details-content">
+            <p>This is an example of using the <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> tags to create expandable content.</p>
+            <p>You can add <a href="#">clickable links</a> and other elements like images and tables within this section.</p>
+            
+            <div class="table-container">
+                <table border="1" cellpadding="5" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Header 1</th>
+                            <th>Header 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data 1</td>
+                            <td>Data 2</td>
+                        </tr>
+                        <tr>
+                            <td>Data 3</td>
+                            <td>Data 4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </details>
+</body>
+</html>
